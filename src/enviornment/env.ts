@@ -1,6 +1,6 @@
 import { exit } from "process";
-import { IEnv } from "./types";
-import { IEnvironmentType } from "./types";
+import { IEnv } from "../types/types";
+import { IEnvironmentType } from "../types/types";
 /**
  * we are only allowing 3 environments and return the 
  * related configs for each stored in environments folder.

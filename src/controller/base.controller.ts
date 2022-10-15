@@ -4,8 +4,8 @@
 import { Response } from "express";
 import { StatusCodes } from "http-status-codes";
 import { Document, Model, ObjectId } from "mongoose";
-import { IPagination } from "./types";
-import { http_formatter } from "./util";
+import { IPagination } from "../types/types";
+import { http_formatter } from "../util";
 
 // we have created a generic base controller.
 export class BaseController<T> {

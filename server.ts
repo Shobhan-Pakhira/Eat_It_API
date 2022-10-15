@@ -1,6 +1,6 @@
-import { env } from "./src/env";
+import { env } from "./src/enviornment/env";
 import { App } from "./src/app";
-import { __middleware } from "./src/middleware";
+import { __middleware } from "./src/middleware/middleware";
 import { allRoutes } from "./src/routes";
 
 const dotenv = require('dotenv');
