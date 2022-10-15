@@ -1,4 +1,4 @@
-import { env } from "./enviornment/env";
+import { env } from "./environment/env";
 import { Application } from "express";
 import express = require("express");
 import mongoose = require("mongoose");

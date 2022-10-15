@@ -1,7 +1,7 @@
-import { env } from "./src/enviornment/env";
-import { App } from "./src/app";
-import { __middleware } from "./src/middleware/middleware";
-import { allRoutes } from "./src/routes";
+import { env } from "./environment/env";
+import { App } from "./app";
+import { __middleware } from "./middleware/middleware";
+import { allRoutes } from "./routes";
 
 const dotenv = require('dotenv');
 dotenv.config()
@@ -10,6 +10,7 @@ const PORT: number = env().port;
 const app = new App(PORT, __middleware, allRoutes);
 
 try {
+  /* Connect to MongoDB*/
   const {user, pw, name, account} = env().db;
   const DB_URI = env().db.uri(user,pw,name,account);
   app.mongoDB(DB_URI);
