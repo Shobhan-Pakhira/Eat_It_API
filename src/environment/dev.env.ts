@@ -6,17 +6,17 @@ const development_environment_variables: IEnv =  {
     domain:'',
     apiPath: '/api',
     staticPath: '/public',
-    db: {
+    /*db: {
         // add localhost mongodb details //
         name: '',
-        user:'',
-        pw: '',
+        user:'shobhanpakhira',
+        pw: 'Tuf@devil',
         account: '',
         uri: (user: string, pw :string, name :string, account: string): string => {
-            return 'mongodb://localhost:27017'
-            // return `mongodb+srv://${user}:${pw}${account}.vsche.mongodb.net/${name}?retryWrites=true&w=majority`;
-        }
-    }
+            // return 'mongodb://localhost:27017'
+            return `mongodb+srv://shobhanpakhira:<Tuf@devil>@ts-api.5sluvep.mongodb.net/?retryWrites=true&w=majority`;
+        }*/
+    db: "mongodb://0.0.0.0:27017/"
 }
 
 export = { ...development_environment_variables }

@@ -2,32 +2,27 @@ import { Document, model, Schema } from "mongoose";
 import { z } from 'zod';
 export const DeliveryValidator = z.object({
      name: z.string().min(2).max(50).trim(),
-     description: z.string().min(10),
-     price: z.number().max(5).min(1),
-     Quantity: z.string().min(1).max(10),
+     phone: z.number().min(10),
+     total: z.number().max(5).min(1),
      isDeleted: z.boolean().default(false).optional(),
      
         });
 
-export type Delivery = z.infer<typeof DeliveryValidator>;
+export type IDelivery = z.infer<typeof DeliveryValidator>;
 
-export interface IStarter extends Document, Delivery {}
+export interface IStarter extends Document, IDelivery {}
 
 const DeliverySchema = new Schema<IDelivery>({
     name: {
         type: String,
         required: true,
     },
-    description: {
-        type: String,
-        required: true,
-    },
-    price: {
+    phone: {
         type: Number,
         required: true,
     },
-    Quantity: {
-        type: String,
+    total: {
+        type: Number,
         required: true,
     },
     
@@ -40,4 +35,4 @@ const DeliverySchema = new Schema<IDelivery>({
     versionKey: false
 });
 
-export const Delivery = model<IDelivery>("Starter", DeliverySchema);
+export const Delivery = model<IDelivery>("Delivery", DeliverySchema);
